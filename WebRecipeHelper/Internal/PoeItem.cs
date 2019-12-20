@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
 namespace WebRecipeHelper
 {
-    public class PoeItem
+    public class PoeItem : IEquatable<PoeItem>
     {
         [JsonProperty("verified")]
         public bool Verified { get; }
@@ -63,6 +65,32 @@ namespace WebRecipeHelper
             this.PositionX = positionX;
             this.PositionY = positionY;
             this.InventoryId = inventoryId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as PoeItem);
+        }
+
+        public bool Equals([AllowNull] PoeItem other)
+        {
+            return other != null &&
+                   this.Id == other.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(this.Id);
+        }
+
+        public static bool operator ==(PoeItem left, PoeItem right)
+        {
+            return EqualityComparer<PoeItem>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(PoeItem left, PoeItem right)
+        {
+            return !(left == right);
         }
     }
 }

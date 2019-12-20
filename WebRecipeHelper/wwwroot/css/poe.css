@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.highlight {
+    border: thin solid red;
+}
+
 .item {
     --one-unit: 47.5px;
 }

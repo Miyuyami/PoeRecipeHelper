@@ -21,22 +21,53 @@
         Stash Tab Name: <input type="text" asp-for="TabName" />
     </p>
     <p>
-        <input type="submit" value="Submit" />
+        <input class="btn btn-primary" type="submit" value="Submit" />
     </p>
 </form>
 
-<p>Result:</p>
-<div class="stash">
-    @foreach (var item in Model.Result)
-    {
-        string widthClass = $"iWidth{item.Width}";
-        string heightClass = $"iHeight{item.Height}";
+<div class="result">
+    <p>
+        <button id="previousPageButton" class="btn btn-secondary" disabled>Previous</button>
+        <button id="nextPageButton" class="btn btn-secondary" disabled>Next</button>
+    </p>
+    <div class="stash">
+        @if (Model.CanDisplayStash)
+        {
+            <p>Result:</p>
+            foreach (var item in Model.Stash)
+            {
+                string widthClass = $"iWidth{item.Width}";
+                string heightClass = $"iHeight{item.Height}";
 
-        string leftPixels = $"{47.5 * item.PositionX}px";
-        string topPixels = $"{47.5 * item.PositionY}px";
+                string leftPixels = $"{Model.OneUnitSize * item.PositionX}px";
+                string topPixels = $"{Model.OneUnitSize * item.PositionY}px";
 
-        <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
-            <img src="@item.IconUrl" />
+                <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
+                    <img src="@item.IconUrl" />
+                </div>
+            }
+        }
+
+        <div id="stash-highlights">
+            @if (Model.CanDisplayHighlights)
+            {
+                int pageNumber = 1;
+                foreach (var set in Model.HighlightSets)
+                {
+                    <div id="highlight-page-@(pageNumber++)" style="display: none">
+                        @foreach (var i in set)
+                        {
+                            string widthClass = $"iWidth{i.Item.Width}";
+                            string heightClass = $"iHeight{i.Item.Height}";
+
+                            string leftPixels = $"{Model.OneUnitSize * i.Item.PositionX}px";
+                            string topPixels = $"{Model.OneUnitSize * i.Item.PositionY}px";
+
+                            <div class="item @widthClass @heightClass highlight" style="position: absolute; left: @leftPixels; top: @topPixels"></div>
+                        }
+                    </div>
+                }
+            }
         </div>
-    }
+    </div>
 </div>
