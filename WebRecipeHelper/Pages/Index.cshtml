@@ -63,7 +63,9 @@
                             string leftPixels = $"{Model.OneUnitSize * i.Item.PositionX}px";
                             string topPixels = $"{Model.OneUnitSize * i.Item.PositionY}px";
 
-                            <div class="item @widthClass @heightClass highlight" style="position: absolute; left: @leftPixels; top: @topPixels"></div>
+                            <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
+                                <div class="highlight"></div>
+                            </div>
                         }
                     </div>
                 }
