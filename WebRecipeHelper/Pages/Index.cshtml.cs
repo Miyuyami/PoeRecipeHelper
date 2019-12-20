@@ -45,12 +45,17 @@ namespace WebRecipeHelper.Pages
         [BindProperty(SupportsGet = true), Required]
         public string TabName { get; set; }
 
-        public string Result { get; set; }
+        public List<PoeItem> Result { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger, IPoeClient client)
         {
             this.Logger = logger;
             this.Client = client;
+        }
+
+        public async Task OnGetAsync()
+        {
+            this.Result = new List<PoeItem>();
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -62,7 +67,7 @@ namespace WebRecipeHelper.Pages
 
             var result = await this.Client.GetItemsAsync(this.SessionId, this.League, this.Realm, this.AccountName, this.TabName);
 
-            this.Result = String.Join("\n", result.Select(i => i.TypeLine));
+            this.Result = result;
 
             return this.Page();
         }

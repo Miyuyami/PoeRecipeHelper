@@ -26,4 +26,17 @@
 </form>
 
 <p>Result:</p>
-<p>@Model.Result</p>
+<div class="stash">
+    @foreach (var item in Model.Result)
+    {
+        string widthClass = $"iWidth{item.Width}";
+        string heightClass = $"iHeight{item.Height}";
+
+        string leftPixels = $"{47.5 * item.PositionX}px";
+        string topPixels = $"{47.5 * item.PositionY}px";
+
+        <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
+            <img src="@item.IconUrl" />
+        </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿.stash {
+    background-image: url(https://web.poecdn.com/image/inventory/StashPanelGrid.png);
+    width: 569px;
+    height: 569px;
+    position: relative;
+}
+
+.item {
+    --one-unit: 47.5px;
+}
+
+.item.iWidth1 {
+    width: calc(var(--one-unit) * 1);
+}
+
+.item.iWidth2 {
+    width: calc(var(--one-unit) * 2);
+}
+
+.item.iWidth3 {
+    width: calc(var(--one-unit) * 3);
+}
+
+.item.iWidth4 {
+    width: calc(var(--one-unit) * 4);
+}
+
+.item.iWidth5 {
+    width: calc(var(--one-unit) * 5);
+}
+
+.item.iHeight1 {
+    height: calc(var(--one-unit) * 1);
+}
+
+.item.iHeight2 {
+    height: calc(var(--one-unit) * 2);
+}
+
+.item.iHeight3 {
+    height: calc(var(--one-unit) * 3);
+}
+
+.item.iHeight4 {
+    height: calc(var(--one-unit) * 4);
+}
+
+.item.iHeight5 {
+    height: calc(var(--one-unit) * 5);
+}
