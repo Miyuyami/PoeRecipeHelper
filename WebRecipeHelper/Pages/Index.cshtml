@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <p>
+        POESESSID: <input type="text" asp-for="SessionId" />
+    </p>
+    <p>
+        League: <select asp-for="League" asp-items="Model.Leagues"></select>
+    </p>
+    <p>
+        Realm: <select asp-for="Realm" asp-items="Model.Realms"></select>
+    </p>
+    <p>
+        Account Name: <input type="text" asp-for="AccountName" />
+    </p>
+    <p>
+        Stash Tab Name: <input type="text" asp-for="TabName" />
+    </p>
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+</form>
+
+<p>Result:</p>
+<p>@Model.Result</p>
