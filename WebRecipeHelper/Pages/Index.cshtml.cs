@@ -114,6 +114,11 @@ namespace WebRecipeHelper.Pages
             IImmutableList<PoeItemQuality> result;
             do
             {
+                if (restSet.Count == 0)
+                {
+                    break;
+                }
+
                 var list = this.Rec(restSet.ToList(), sum, 0);
                 if (list == null)
                 {
