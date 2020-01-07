@@ -86,9 +86,9 @@ namespace WebRecipeHelper.Pages
 
             var result = await this.Client.GetItemsAsync(this.SessionId, this.League, this.Realm, this.AccountName, this.TabName);
 
-            this.Stash = result;
-
             this.HighlightSets = this.GetSets(result, 40, 20).ToImmutableList();
+
+            this.Stash = result.Except(this.HighlightSets.SelectMany(x => x).Select(p => p.Item));
 
             return this.Page();
         }

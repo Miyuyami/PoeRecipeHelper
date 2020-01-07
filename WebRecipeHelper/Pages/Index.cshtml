@@ -52,20 +52,41 @@
             @if (Model.CanDisplayHighlights)
             {
                 int pageNumber = 1;
-                foreach (var set in Model.HighlightSets)
+                for (int i = 0; i < Model.HighlightSets.Count; i++)
                 {
+                    var set = Model.HighlightSets[i];
+                    
                     <div id="highlight-page-@(pageNumber++)" style="display: none">
-                        @foreach (var i in set)
+                        @foreach (var iq in set)
                         {
-                            string widthClass = $"iWidth{i.Item.Width}";
-                            string heightClass = $"iHeight{i.Item.Height}";
+                            string widthClass = $"iWidth{iq.Item.Width}";
+                            string heightClass = $"iHeight{iq.Item.Height}";
 
-                            string leftPixels = $"{Model.OneUnitSize * i.Item.PositionX}px";
-                            string topPixels = $"{Model.OneUnitSize * i.Item.PositionY}px";
+                            string leftPixels = $"{Model.OneUnitSize * iq.Item.PositionX}px";
+                            string topPixels = $"{Model.OneUnitSize * iq.Item.PositionY}px";
 
                             <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
+                                <img src="@iq.Item.IconUrl" />
                                 <div class="highlight"></div>
                             </div>
+                        }
+
+                        @for (int j = i + 1; j < Model.HighlightSets.Count; j++)
+                        {
+                            var otherSets = Model.HighlightSets[j];
+
+                            foreach (var iq in otherSets)
+                            {
+                                string widthClass = $"iWidth{iq.Item.Width}";
+                                string heightClass = $"iHeight{iq.Item.Height}";
+
+                                string leftPixels = $"{Model.OneUnitSize * iq.Item.PositionX}px";
+                                string topPixels = $"{Model.OneUnitSize * iq.Item.PositionY}px";
+
+                                <div class="item @widthClass @heightClass" style="position: absolute; left: @leftPixels; top: @topPixels">
+                                    <img src="@iq.Item.IconUrl" />
+                                </div>
+                            }
                         }
                     </div>
                 }
