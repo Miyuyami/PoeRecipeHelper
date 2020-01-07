@@ -103,14 +103,18 @@ namespace WebRecipeHelper.Pages
                      .Select(t => new PoeItemQuality(t.i, t.Item2.Values.Select(t => Convert.ToInt32(Regex.Match(t.value, @"\+(\d+)\%").Groups[1].Value)).Sum()))
                      .OrderByDescending(t => t.Quality);
 
-            foreach (var i in enumerable.Where(p => p.Quality >= instantValue))
+            var instants = enumerable.Where(p => p.Quality >= instantValue &&
+                                                 p.Item.ExplicitMods.Count == 0);
+
+            foreach (var i in instants)
             {
                 var builder = this.CreateNewBuilder();
                 builder.Add(i);
                 yield return builder.ToImmutable();
             }
 
-            var restSet = enumerable.Where(p => p.Quality < instantValue && p.Quality > 0).ToHashSet();
+            var restSet = enumerable.Except(instants)
+                                    .ToHashSet();
             IImmutableList<PoeItemQuality> result;
             do
             {
