@@ -104,7 +104,7 @@ namespace WebRecipeHelper.Pages
                      .OrderByDescending(t => t.Quality);
 
             var instants = enumerable.Where(p => p.Quality >= instantValue &&
-                                                 p.Item.ExplicitMods.Count == 0);
+                                                (p.Item.ItemLevel == 0 || (p.Item.ExplicitMods?.Count ?? 0) == 0));
 
             foreach (var i in instants)
             {
