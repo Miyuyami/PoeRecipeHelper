@@ -1,4 +1,4 @@
-using PoeRecipeGeneratorApi.Services;
+using BackendForFrontend.Services;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

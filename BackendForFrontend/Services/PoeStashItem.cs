@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PoeRecipeGeneratorApi.Services;
+namespace BackendForFrontend.Services;
 
 public class PoeStashItem {
     [JsonProperty("verified")] public bool Verified { get; }

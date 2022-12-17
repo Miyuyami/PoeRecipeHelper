@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PoeRecipeGeneratorApi.Services;
+namespace BackendForFrontend.Services;
 
 public class PoeProperty {
     public PoeProperty(string name, List<object[]> values, int displayMode) {

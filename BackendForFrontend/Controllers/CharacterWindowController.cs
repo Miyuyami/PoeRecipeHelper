@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
+using BackendForFrontend.Services;
 using Microsoft.AspNetCore.Mvc;
-using PoeRecipeGeneratorApi.Services;
 
-namespace PoeRecipeGeneratorApi.Controllers;
+namespace BackendForFrontend.Controllers;
 
 [ApiController]
 [Route("api/character-window")]

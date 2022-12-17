@@ -1,4 +1,4 @@
-namespace PoeRecipeGeneratorApi.Services;
+namespace BackendForFrontend.Services;
 
 public class PoeStashItemModel {
     public string IconUrl { get; init; }

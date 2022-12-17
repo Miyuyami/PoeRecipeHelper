@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeRecipeGeneratorApi", "PoeRecipeGeneratorApi\PoeRecipeGeneratorApi.csproj", "{108ACC36-EEF7-4BFD-957D-5B8038C4938D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendForFrontend", "BackendForFrontend\BackendForFrontend.csproj", "{108ACC36-EEF7-4BFD-957D-5B8038C4938D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

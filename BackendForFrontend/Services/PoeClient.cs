@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
 using Newtonsoft.Json.Linq;
 
-namespace PoeRecipeGeneratorApi.Services;
+namespace BackendForFrontend.Services;
 
 public class PoeClient : IPoeClient {
     private readonly HttpClient Client;
