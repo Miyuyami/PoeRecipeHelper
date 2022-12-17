@@ -45,6 +45,9 @@
     "serve": "^14.1.2",
     "typescript": "latest"
   },
+  "resolutions": {
+    "nth-check": "^2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
