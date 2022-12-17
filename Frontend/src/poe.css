@@ -1,0 +1,106 @@
+﻿.stash {
+  background: url(https://web.poecdn.com/protected/image/inventory/StashPanelGrid.png?v=1670373168350&key=Po-gyieF8oixuG2FPd_2hw) repeat-y
+    top left;
+  width: 569px;
+  margin: 0 1px;
+  padding: 6px;
+}
+
+.quality-stash {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  width: 585px;
+  margin-top: 19px;
+  margin-bottom: 23px;
+  background: url(https://web.poecdn.com/protected/image/inventory/StashPanelGrid.png?v=1670373168350&key=Po-gyieF8oixuG2FPd_2hw) repeat-y
+    top left;
+}
+
+.quality-group:empty {
+  display: none;
+}
+
+.quality-group::before {
+  position: absolute;
+  top: -19px;
+  display: block;
+  height: 19px;
+  width: 100%;
+  padding-left: 6px;
+  margin-left: 4px;
+  background: url(https://web.poecdn.com/protected/image/layout/stash/gem-tab/section-header.png?v=1670373174410&key=DG8JGtGfkmyHWDj-wMIgFA)
+    no-repeat center left;
+  content: attr(data-title);
+  line-height: 19px;
+  text-align: left;
+  color: #e1cfae;
+  font-family: "FontinSmallCaps", Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.highlight {
+  background: red radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+  width: calc(var(--one-unit) / 3);
+  height: calc(var(--one-unit) / 3);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 0px 0.15em lightgreen;
+}
+
+.item {
+  position: relative;
+  display: inline-flex;
+  --one-unit: 47.5px;
+}
+
+.item.iWidth1 {
+  width: calc(var(--one-unit) * 1);
+}
+
+.item.iWidth2 {
+  width: calc(var(--one-unit) * 2);
+}
+
+.item.iWidth3 {
+  width: calc(var(--one-unit) * 3);
+}
+
+.item.iWidth4 {
+  width: calc(var(--one-unit) * 4);
+}
+
+.item.iWidth5 {
+  width: calc(var(--one-unit) * 5);
+}
+
+.item.iHeight1 {
+  height: calc(var(--one-unit) * 1);
+}
+
+.item.iHeight2 {
+  height: calc(var(--one-unit) * 2);
+}
+
+.item.iHeight3 {
+  height: calc(var(--one-unit) * 3);
+}
+
+.item.iHeight4 {
+  height: calc(var(--one-unit) * 4);
+}
+
+.item.iHeight5 {
+  height: calc(var(--one-unit) * 5);
+}

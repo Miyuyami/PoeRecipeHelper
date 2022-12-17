@@ -1,0 +1,76 @@
+﻿@font-face {
+    font-family: "FontinSmallCaps";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/fontin-smallcaps-webfont.woff') format("woff")
+}
+
+@font-face {
+    font-family: "FontinRegular";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/fontin-regular-webfont.woff') format("woff")
+}
+
+@font-face {
+    font-family: "FontinItalic";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/fontin-italic-webfont.woff') format("woff")
+}
+
+@font-face {
+    font-family: "FontinBold";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/fontin-bold-webfont.woff') format("woff")
+}
+
+@font-face {
+    font-family: "Cinzel";
+    font-weight: normal;
+    font-style: normal;
+    src: local("Cinzel-Regular"), url('https://web.poecdn.com/font/Cinzel-Regular.woff') format("woff")
+}
+
+@font-face {
+    font-family: "FrizQuadrataC";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/FrizQuadrataC.woff') format("woff")
+}
+
+@font-face {
+    font-family: "Daehan";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/Daehan.woff') format("woff")
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/noto-sans-jp-v42-latin_japanese-regular.woff2') format("woff2"), url('https://web.poecdn.com/font/noto-sans-jp-v42-latin_japanese-regular.woff') format("woff")
+}
+
+@font-face {
+    font-family: "Noto Serif JP";
+    font-weight: normal;
+    font-style: normal;
+    src: local("☺"), url('https://web.poecdn.com/font/noto-serif-jp-v21-latin_japanese-regular.woff2') format("woff2"), url('https://web.poecdn.com/font/noto-serif-jp-v21-latin_japanese-regular.woff') format("woff")
+}
+
+@font-face {
+    font-family: "Quikhand";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Quikhand"), url("https://web.poecdn.com/font/Quikhand.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Caveat-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Caveat-Bold"), url("https://web.poecdn.com/font/Caveat-Bold.woff2") format("woff2")
+}
